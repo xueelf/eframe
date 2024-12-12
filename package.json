@@ -1,0 +1,30 @@
+{
+  "name": "eframe",
+  "version": "0.0.1",
+  "description": "Emulate an application window within a browser",
+  "type": "module",
+  "module": "index.ts",
+  "packageManager": "bun@1.1.0",
+  "scripts": {
+    "build": "bun ./scripts/build/index.ts"
+  },
+  "repository": "github:xueelf/eframe",
+  "keywords": [],
+  "author": "Yuki <admin@yuki.sh>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xueelf/eframe/issues"
+  },
+  "homepage": "https://github.com/xueelf/eframe#readme",
+  "dependencies": {
+    "vhtml": "latest"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/vhtml": "latest",
+    "sass": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "latest"
+  }
+}

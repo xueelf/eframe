@@ -1,0 +1,63 @@
+.mac {
+  display: flex;
+  justify-content: center;
+  padding: 0.9rem 1rem;
+  width: 100%;
+
+  .title {
+    min-height: 0.9rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+    line-height: 0.9rem;
+    letter-spacing: 0.5px;
+  }
+
+  .controls {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    display: grid;
+    gap: 0.6rem;
+    grid-template-columns: repeat(3, 0.8rem);
+
+    svg {
+      opacity: 0;
+    }
+
+    &:hover button {
+      transform: scale(1.2);
+    }
+
+    &:hover svg {
+      opacity: 1;
+    }
+
+    .close {
+      --bg-color: #ff5f56;
+      --border-color: #e0443e;
+    }
+
+    .stretch {
+      --bg-color: #27c93f;
+      --border-color: #1aab29;
+    }
+
+    .stretch svg {
+      transform: rotate(90deg);
+    }
+
+    .minimize {
+      --bg-color: #ffbd2e;
+      --border-color: #dea123;
+    }
+
+    .circle {
+      width: 0.8rem;
+      height: 0.8rem;
+      border-radius: 50%;
+      background-color: var(--bg-color);
+      box-shadow: 0 0 0 0.5px var(--border-color);
+      transition: transform 0.1s ease-in;
+    }
+  }
+}
