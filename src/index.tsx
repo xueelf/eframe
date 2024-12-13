@@ -43,9 +43,9 @@ function WindowsControls(): string {
 }
 
 function TitleBar(props: FrameProps): string {
-  const { name, type } = props;
+  const { name, theme } = props;
 
-  switch (type) {
+  switch (theme) {
     case 'mac':
       return (
         <header class="mac">
@@ -71,11 +71,11 @@ function ContentArea(): string {
   );
 }
 
-type FrameType = 'mac' | 'windows';
+type FrameTheme = 'mac' | 'windows';
 
 interface FrameProps {
   name: string | null;
-  type: FrameType;
+  theme: FrameTheme;
 }
 
 function Frame(props: FrameProps): string {
@@ -90,7 +90,7 @@ function Frame(props: FrameProps): string {
 class EFrame extends HTMLElement {
   public shadowRoot: ShadowRoot;
   private styleBaseElement: HTMLStyleElement;
-  private styleTypeElement: HTMLStyleElement;
+  private styleThemeElement: HTMLStyleElement;
   private sectionElement: HTMLElement;
 
   constructor() {
@@ -98,44 +98,44 @@ class EFrame extends HTMLElement {
 
     const shadowRoot = this.attachShadow({ mode: 'open' });
     const styleBaseElement: HTMLStyleElement = document.createElement('style');
-    const styleTypeElement: HTMLStyleElement = document.createElement('style');
+    const styleThemeElement: HTMLStyleElement = document.createElement('style');
     const sectionElement: HTMLElement = document.createElement('section');
 
     this.shadowRoot = shadowRoot;
     this.styleBaseElement = styleBaseElement;
-    this.styleTypeElement = styleTypeElement;
+    this.styleThemeElement = styleThemeElement;
     this.sectionElement = sectionElement;
   }
 
-  private setStyle(type: FrameType): void {
+  private setStyle(theme: FrameTheme): void {
     this.styleBaseElement.textContent = styleBase;
-    this.styleTypeElement.textContent = styles[type];
+    this.styleThemeElement.textContent = styles[theme];
   }
 
-  private getType(): FrameType {
-    const type: string = this.getAttribute('type') ?? 'mac';
-    const types: string[] = ['mac', 'windows'];
+  private getTheme(): FrameTheme {
+    const theme: string = this.getAttribute('theme') ?? 'mac';
+    const themes: string[] = ['mac', 'windows'];
 
-    return (types.includes(type) ? type : 'mac') as FrameType;
+    return (themes.includes(theme) ? theme : 'mac') as FrameTheme;
   }
 
   public render(): void {
     const name: string | null = this.getAttribute('name');
-    const type: FrameType = this.getType();
+    const theme: FrameTheme = this.getTheme();
 
-    this.setStyle(type);
-    this.sectionElement.innerHTML = <Frame name={name} type={type} />;
+    this.setStyle(theme);
+    this.sectionElement.innerHTML = <Frame name={name} theme={theme} />;
   }
 
   public connectedCallback(): void {
     this.shadowRoot.appendChild(this.styleBaseElement);
-    this.shadowRoot.appendChild(this.styleTypeElement);
+    this.shadowRoot.appendChild(this.styleThemeElement);
     this.shadowRoot.appendChild(this.sectionElement);
     this.render();
   }
 
   public static get observedAttributes(): string[] {
-    return ['name', 'type'];
+    return ['name', 'theme'];
   }
 
   public attributeChangedCallback(): void {
