@@ -16,7 +16,7 @@ You can directly include it in your page via a URI, or use other CDNs such as [U
 
 ```html
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
   <head>
     <title>Example</title>
     <style>

@@ -1,15 +1,19 @@
 {
   "name": "eframe",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Emulate an application window within a browser",
-  "type": "module",
-  "module": "index.ts",
+  "main": "dist/index.js",
   "packageManager": "bun@1.1.0",
   "scripts": {
-    "build": "bun ./scripts/build/index.ts"
+    "build": "bun scripts/build/index.ts"
   },
   "repository": "github:xueelf/eframe",
-  "keywords": [],
+  "keywords": [
+    "application",
+    "browser",
+    "frame",
+    "window"
+  ],
   "author": "Yuki <admin@yuki.sh>",
   "license": "MIT",
   "bugs": {
