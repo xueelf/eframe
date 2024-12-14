@@ -116,7 +116,11 @@ class EFrame extends HTMLElement {
     const theme: string = this.getAttribute('theme') ?? 'mac';
     const themes: string[] = ['mac', 'windows'];
 
-    return (themes.includes(theme) ? theme : 'mac') as FrameTheme;
+    return themes.includes(theme) ? (theme as FrameTheme) : 'mac';
+  }
+
+  private handleClose(): void {
+    this.remove();
   }
 
   public render(): void {
@@ -132,6 +136,9 @@ class EFrame extends HTMLElement {
     this.shadowRoot.appendChild(this.styleThemeElement);
     this.shadowRoot.appendChild(this.sectionElement);
     this.render();
+    this.shadowRoot
+      .querySelector('header .close')
+      ?.addEventListener('click', () => this.handleClose());
   }
 
   public static get observedAttributes(): string[] {

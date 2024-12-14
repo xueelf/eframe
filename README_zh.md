@@ -2,7 +2,7 @@
 
 标签 `<e-frame>`（Emulation Frame） 是一个使用 [TypeScript](https://www.typescriptlang.org/zh/) 开发，能够让你在浏览器中创建模仿系统应用窗口的 [Web Component](https://developer.mozilla.org/zh-CN/docs/Web/API/Web_components)。
 
-使用其他语言阅读：[English](README.md) | 简体中文
+使用其他语言阅读：[English](./README.md) | 简体中文
 
 ## 安装
 
@@ -37,7 +37,7 @@
 
 在成功加载脚本后，使用 `<e-frame>` 标签，你便可以在浏览器中看到一个模仿系统应用的窗口界面。
 
-![](https://cdn.sa.net/2024/12/13/3MxQXPkBVqobuyw.png)
+![window](https://cdn.sa.net/2024/12/13/3MxQXPkBVqobuyw.png)
 
 ## 属性
 

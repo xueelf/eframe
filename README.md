@@ -2,7 +2,7 @@
 
 The `<e-frame>` (Emulation Frame) is a [Web Component](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) developed using [TypeScript](https://www.typescriptlang.org/), that allows you to create emulated system application window directly within a browser.
 
-Read this in other languages: English | [简体中文](README.zh.md)
+Read this in other languages: English | [简体中文](./README_zh.md)
 
 ## Installation
 
@@ -37,7 +37,7 @@ You can directly include it in your page via a URI, or use other CDNs such as [U
 
 After successfully loading the script, use the `<e-frame>` tag to create a window that mimics a native system application.
 
-![](https://cdn.sa.net/2024/12/13/3MxQXPkBVqobuyw.png)
+![window](https://cdn.sa.net/2024/12/13/3MxQXPkBVqobuyw.png)
 
 ## Attributes
 
