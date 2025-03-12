@@ -7,7 +7,7 @@ Read this in other languages: English | [简体中文](./README_zh.md)
 ## Installation
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/eframe/dist/index.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/eframe/lib/index.min.js"></script>
 ```
 
 You can directly include it in your page via a URI, or use other CDNs such as [UNPKG](https://unpkg.com/) as you prefer.
@@ -30,7 +30,7 @@ You can directly include it in your page via a URI, or use other CDNs such as [U
       <div class="margin">hello world</div>
     </e-frame>
 
-    <script src="https://cdn.jsdelivr.net/npm/eframe/dist/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/eframe/lib/index.min.js"></script>
   </body>
 </html>
 ```

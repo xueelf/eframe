@@ -1,23 +1,35 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "lib": ["dom", "esnext"],
-    "jsx": "react",
-    "jsxFactory": "h",
-    "jsxFragmentFactory": "Fragment",
-    "module": "esnext",
-    "rootDir": "src",
+    /* Language and Environment */
+    "target": "ESNext",
+    "lib": ["DOM", "ESNext"],
+    "jsx": "react-jsx",
+    "jsxImportSource": "hanno",
+    "moduleDetection": "force",
+
+    /* Modules */
+    "module": "ESNext",
     "moduleResolution": "bundler",
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
       "@/*": ["src/*"]
     },
+    "allowImportingTsExtensions": true,
+
+    /* Emit */
     "noEmit": true,
-    "outDir": "dist",
+
+    /* Interop Constraints */
+    "verbatimModuleSyntax": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+
+    /* Type Checking */
     "strict": true,
+    "noFallthroughCasesInSwitch": true,
+
+    /* Completeness */
     "skipLibCheck": true
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "types"]
+  "include": ["scripts/**/*.ts", "src/*.tsx", "types/*.d.ts"]
 }

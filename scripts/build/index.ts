@@ -3,7 +3,7 @@ import { sassPlugin, svgPlugin } from './plugin';
 
 const config: BuildConfig = {
   entrypoints: ['./src/index.tsx'],
-  outdir: './dist',
+  outdir: './lib',
   target: 'browser',
   format: 'esm',
 };

@@ -1,13 +1,12 @@
-import h from 'vhtml';
-import styleBase from './styles/base.scss';
-import styleMac from './styles/mac.scss';
-import styleWindows from './styles/windows.scss';
-import MacClose from './assets/mac/close.svg';
-import MacMinimize from './assets/mac/minimize.svg';
-import MacStretch from './assets/mac/stretch.svg';
-import WindowsClose from './assets/windows/close.svg';
-import WindowsMinimize from './assets/windows/minimize.svg';
-import WindowsStretch from './assets/windows/stretch.svg';
+import styleBase from '@/styles/base.scss';
+import styleMac from '@/styles/mac.scss';
+import styleWindows from '@/styles/windows.scss';
+import MacClose from '@/assets/icons/mac/close.svg';
+import MacMinimize from '@/assets/icons/mac/minimize.svg';
+import MacStretch from '@/assets/icons/mac/stretch.svg';
+import WindowsClose from '@/assets/icons/windows/close.svg';
+import WindowsMinimize from '@/assets/icons/windows/minimize.svg';
+import WindowsStretch from '@/assets/icons/windows/stretch.svg';
 
 const styles = {
   mac: styleMac,

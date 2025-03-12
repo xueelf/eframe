@@ -1,13 +1,19 @@
 {
   "name": "eframe",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Emulate an application window within a browser",
-  "main": "dist/index.js",
-  "packageManager": "bun@1.1.0",
+  "main": "lib/index.js",
+  "packageManager": "bun@1.2.0",
+  "files": [
+    "lib"
+  ],
   "scripts": {
-    "build": "bun scripts/build/index.ts"
+    "build": "NODE_ENV=production bun ./scripts/build/index.ts"
   },
-  "repository": "github:xueelf/eframe",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xueelf/eframe.git"
+  },
   "keywords": [
     "application",
     "browser",
@@ -20,12 +26,9 @@
     "url": "https://github.com/xueelf/eframe/issues"
   },
   "homepage": "https://github.com/xueelf/eframe#readme",
-  "dependencies": {
-    "vhtml": "latest"
-  },
   "devDependencies": {
     "@types/bun": "latest",
-    "@types/vhtml": "latest",
+    "hanno": "latest",
     "sass": "latest"
   },
   "peerDependencies": {

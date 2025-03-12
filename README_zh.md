@@ -7,7 +7,7 @@
 ## 安装
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/eframe/dist/index.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/eframe/lib/index.min.js"></script>
 ```
 
 你可以直接通过 URI 将其引入到你的页面中，也可以根据自己的喜好来使用其它 CDN，例如 [UNPKG](https://unpkg.com/)。
@@ -30,7 +30,7 @@
       <div class="margin">hello world</div>
     </e-frame>
 
-    <script src="https://cdn.jsdelivr.net/npm/eframe/dist/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/eframe/lib/index.min.js"></script>
   </body>
 </html>
 ```
